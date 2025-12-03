@@ -1,3 +1,3 @@
-# talle_flutter_2
+# Taller de Flutter 
 
-A new Flutter project.
+Uso de child y children.
