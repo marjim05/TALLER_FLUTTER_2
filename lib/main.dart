@@ -9,10 +9,10 @@ class MainApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    debugShowCheckedModeBanner: false;
     return const MaterialApp(
+      debugShowCheckedModeBanner: false,
       home: MyWidget(),
-      );
+    );
   }
 }
 
@@ -22,25 +22,22 @@ class MyWidget extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        title: const Text('My Widget'),
-      ),
-      body: SingleChildScrollView (
-        child: Container (
+      appBar: AppBar(title: const Text('Child y Children', style: TextStyle())),
+      body: SingleChildScrollView(
+        child: Container(
+          color: const Color.fromARGB(255, 223, 182, 240),
+          height: 600,
           alignment: Alignment.bottomCenter,
           padding: const EdgeInsets.all(16.0),
-          child: Column (
+          child: Column(
+            crossAxisAlignment: CrossAxisAlignment.center,
+            mainAxisAlignment: MainAxisAlignment.center,
             children: [
               const SizedBox(height: 20),
-              ElevatedButton(onPressed:() {
-                // Button action
-              }, child: const Text('Press Me')),
-              ElevatedButton(onPressed:(){
-                // Another button action
-              }, child: const Text('Click Me')),  
+              ElevatedButton(onPressed: () {}, child: const Text('Botón 1 ')),
+              ElevatedButton(onPressed: () {}, child: const Text('Botón 2')),
             ],
           ),
-        
         ),
       ),
     );
